@@ -1,0 +1,1 @@
+clean install -Dbrowser="Chrome" -DqaURL="file:/C:/Users/mail2/Desktop/User_Submission_Form/pages/forms/loginPage.html" -DxmlFiles="testng.xml"
