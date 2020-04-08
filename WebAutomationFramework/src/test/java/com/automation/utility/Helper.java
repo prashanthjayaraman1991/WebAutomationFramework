@@ -16,30 +16,34 @@ import org.openqa.selenium.io.FileHandler;
  * issues java script executer
  */
 public class Helper {
-	
 
-	
 	/**
 	 * This method is used to capture screenshots
+	 * 
 	 * @param driver
 	 */
-	public static void captureScreenshot(WebDriver driver) {
+	public static String captureScreenshot(WebDriver driver) {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		String screenshotName = getCurrentDateTime() + ".png";
+		String screenshotPath = System.getProperty("user.dir") + "/Screenshots/" + screenshotName;
 		try {
-			String screenshotName=getCurrentDateTime()+".png";
-			FileHandler.copy(src, new File("./Screenshots/"+screenshotName));
-			System.out.println("Screenshot Captured with the Name: "+screenshotName);
+
+			FileHandler.copy(src, new File(screenshotPath));
+			System.out.println("Screenshot Captured with the Name: " + screenshotName);
+
 		} catch (IOException e) {
 			System.out.println("Unable to capture screenshot " + e.getMessage());
 		}
+
+		return screenshotPath;
 	}
-	
+
 	/**
 	 * This method is to return the date and time for capturing screenshots
 	 */
 	public static String getCurrentDateTime() {
-		DateFormat customFormat=new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss");
-		Date currentDate=new Date();
+		DateFormat customFormat = new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss");
+		Date currentDate = new Date();
 		return customFormat.format(currentDate).toString();
 	}
 }

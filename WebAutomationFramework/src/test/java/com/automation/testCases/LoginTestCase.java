@@ -10,14 +10,18 @@ public class LoginTestCase extends BaseClass {
 
 	@Test
 	public void testLogin() {
-		
-		
+
+		logger = report.createTest("Login into Testing Web Application");
+
 		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
 
+		logger.info("Starting Application");
+
 		loginPage.loginIntoApplication(excel.getStringData("Login", 0, 0), excel.getStringData("Login", 0, 1));
-		
-		System.out.println("Current title after login is: " +driver.getTitle());
-	
+
+		logger.pass("Login Successful");
+
+		System.out.println("Current title after login is: " + driver.getTitle());
 
 	}
 }
