@@ -25,7 +25,7 @@ public class Helper {
 	public static String captureScreenshot(WebDriver driver) {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String screenshotName = getCurrentDateTime() + ".png";
-		String screenshotPath = "./Screenshots/" + screenshotName;
+		String screenshotPath = System.getProperty("user.dir")+"\\Screenshots\\" + screenshotName;
 		try {
 
 			FileHandler.copy(src, new File(screenshotPath));
