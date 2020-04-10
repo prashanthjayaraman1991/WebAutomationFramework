@@ -25,6 +25,10 @@ public class BaseClass {
 	public ExtentReports report;
 	public ExtentTest logger;
 
+	/**
+	 * setupSuite(); initializes the following: Excel Configuration Files Extent
+	 * Reports Is setup before the test suit is started.
+	 */
 	@BeforeSuite
 	public void setupSuite() {
 		Reporter.log("Setting up reports and Test is getting ready.", true);
@@ -38,21 +42,40 @@ public class BaseClass {
 		Reporter.log("Setting is Done - Test can be started", true);
 	}
 
-	@Parameters({"browser","qaURL"})
+	/**
+	 * setup(browser,url) Starts the browser and navigates to the URL and Maximizes
+	 * the browser. Is setup before the test steps are executed
+	 * 
+	 * @param browser
+	 * @param qaURL
+	 */
+	@Parameters({ "browser", "qaURL" })
 	@BeforeClass
 	public void setup(String browser, String qaURL) {
 		Reporter.log("Starting the Browser and setting the URL", true);
-		
+
 		driver = BrowserFactory.startApplication(driver, browser, qaURL);
-		
+
 		Reporter.log("Browser started and URl is set..", true);
 	}
 
+	/**
+	 * tearDown()- quits the browser after test is completed. Is executed after a
+	 * Test is completed.
+	 */
 	@AfterClass
 	public void tearDown() {
 		BrowserFactory.quitBrrowser(driver);
 	}
 
+	/**
+	 * tearDownMethod(ITestResult result) Screenshots are captured based on the
+	 * final test results: 1. On Test Failure Result 2. On Test Pass Result 3. On
+	 * Test Skipped Result
+	 * 
+	 * @param result
+	 * @throws IOException
+	 */
 	@AfterMethod
 	public void tearDownMethod(ITestResult result) throws IOException {
 

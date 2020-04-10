@@ -8,8 +8,11 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ExcelDataProvier {
 	XSSFWorkbook wb;
 
+	/**
+	 * Constructor which initializes the Execl file used to read test data
+	 */
 	public ExcelDataProvier() {
-		File src = new File("./TestData/TestData.xlsx");
+		File src = new File(System.getProperty("user.dir") + "/TestData/TestData.xlsx");
 
 		try {
 			FileInputStream fis = new FileInputStream(src);
@@ -20,15 +23,39 @@ public class ExcelDataProvier {
 		}
 
 	}
-	
+
+	/**
+	 * returns the data stored in the row and column number passed as parameters
+	 * 
+	 * @param sheetIndex
+	 * @param row
+	 * @param col
+	 * @return
+	 */
 	public String getStringData(int sheetIndex, int row, int col) {
-		return wb.getSheetAt(sheetIndex).getRow(row).getCell(col).getStringCellValue();	
-		}
-	
-	public String getStringData(String sheetName, int row, int col) {
-	return wb.getSheet(sheetName).getRow(row).getCell(col).getStringCellValue();	
+		return wb.getSheetAt(sheetIndex).getRow(row).getCell(col).getStringCellValue();
 	}
-	
+
+	/**
+	 * returns the data stored in the row and column number passed as parameters
+	 * 
+	 * @param sheetIndex
+	 * @param row
+	 * @param col
+	 * @return
+	 */
+	public String getStringData(String sheetName, int row, int col) {
+		return wb.getSheet(sheetName).getRow(row).getCell(col).getStringCellValue();
+	}
+
+	/**
+	 * returns the data stored in the row and column number passed as parameters
+	 * 
+	 * @param sheetIndex
+	 * @param row
+	 * @param col
+	 * @return
+	 */
 	public Double getNumericValue(String sheetName, int row, int col) {
 		return wb.getSheet(sheetName).getRow(row).getCell(col).getNumericCellValue();
 	}
