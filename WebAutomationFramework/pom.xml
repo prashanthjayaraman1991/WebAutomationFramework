@@ -6,6 +6,15 @@
 	<artifactId>WebAutomationFramework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<properties>
+		<threads>1</threads>
+		<selenium.version>3.14.0</selenium.version>
+		<testNG.versio>6.10</testNG.versio>
+		<extentreports.version>4.0.0</extentreports.version>
+		<apache.poi.version>3.17</apache.poi.version>
+		<maven.surefire.plugin.version>3.0.0-M4</maven.surefire.plugin.version>
+
+	</properties>
 	<build>
 
 		<plugins>
@@ -13,7 +22,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.0.0-M4</version>
+				<version>${maven.surefire.plugin.version}</version>
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>XMLFiles/${xmlFiles}</suiteXmlFile>
@@ -27,6 +36,12 @@
 				</configuration>
 			</plugin>
 
+
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-failsafe-plugin</artifactId> 
+				<version>2.17</version> <configuration> <parallel>methods</parallel> <threadCount>${threads}</threadCount> 
+				<includes> <include>**/*WD.java</include> </includes> </configuration> <executions> 
+				<execution> <goals> <goal>integration-test</goal> <goal>verify</goal> </goals> 
+				</execution> </executions> </plugin> -->
 		</plugins>
 
 	</build>
@@ -39,14 +54,14 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.14.0</version>
+			<version>${selenium.version}</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.10</version>
+			<version>${testNG.versio}</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -54,21 +69,21 @@
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
-			<version>4.0.0</version>
+			<version>${extentreports.version}</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>3.17</version>
+			<version>${apache.poi.version}</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
-			<version>3.17</version>
+			<version>${apache.poi.version}</version>
 		</dependency>
 
 
