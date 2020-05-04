@@ -13,40 +13,37 @@
 		<extentreports.version>4.0.0</extentreports.version>
 		<apache.poi.version>3.17</apache.poi.version>
 		<maven.surefire.plugin.version>3.0.0-M4</maven.surefire.plugin.version>
+		<junit.version>4.12</junit.version>
+		<cucumber.version>1.2.4</cucumber.version>
 
 	</properties>
+	<!-- <build> <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-surefire-plugin</artifactId> <version>${maven.surefire.plugin.version}</version> 
+		<configuration> <suiteXmlFiles> <suiteXmlFile>XMLFiles/${xmlFiles}</suiteXmlFile> 
+		</suiteXmlFiles> <systemPropertyVariables> <browser>${browser}</browser> 
+		<qaURL>${qaURL}</qaURL> </systemPropertyVariables> </configuration> </plugin> 
+		</plugins> </build> -->
+
 	<build>
 
 		<plugins>
-
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.plugin.version}</version>
 				<configuration>
-					<suiteXmlFiles>
-						<suiteXmlFile>XMLFiles/${xmlFiles}</suiteXmlFile>
-					</suiteXmlFiles>
-
-					<systemPropertyVariables>
-						<browser>${browser}</browser>
-						<qaURL>${qaURL}</qaURL>
-					</systemPropertyVariables>
-
+					<includes>
+						<include>**/*Runner.java</include>
+					</includes>
 				</configuration>
 			</plugin>
 
 
-			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-failsafe-plugin</artifactId> 
-				<version>2.17</version> <configuration> <parallel>methods</parallel> <threadCount>${threads}</threadCount> 
-				<includes> <include>**/*WD.java</include> </includes> </configuration> <executions> 
-				<execution> <goals> <goal>integration-test</goal> <goal>verify</goal> </goals> 
-				</execution> </executions> </plugin> -->
+
 		</plugins>
 
 	</build>
-
-
 
 	<dependencies>
 
@@ -85,6 +82,30 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>${apache.poi.version}</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
+
 
 
 
