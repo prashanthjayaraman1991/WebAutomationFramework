@@ -4,8 +4,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class Sample {
-
+public class LoginPage {
 	@Given("^Open browser and start applcation$")
 	public void open_browser_and_start_applcation() throws Throwable {
 	    System.out.println("Starting");
