@@ -10,4 +10,4 @@ Feature: Test Facebook smoke scenario
       | username  | password |
       | prashanth | test     |
       | prashanth | test     |
-      | prashanth | test2    |
+      | prashanth | test     |
