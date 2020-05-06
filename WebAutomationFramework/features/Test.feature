@@ -7,7 +7,7 @@ Feature: Test Facebook smoke scenario
     Then user should be able to login succesfully
 
     Examples: 
-      | username   | password |
-      | prashanth  | test     |
-      | prashanth1 | test1    |
-      | prashanth2 | test2    |
+      | username  | password |
+      | prashanth | test     |
+      | prashanth | test     |
+      | prashanth | test2    |

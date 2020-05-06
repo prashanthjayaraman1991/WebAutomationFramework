@@ -8,6 +8,7 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
@@ -17,13 +18,19 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-public class BaseClass {
+import cucumber.api.CucumberOptions;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
 
-	public WebDriver driver;
+@CucumberOptions(features = "features", glue = { "com.automation.stepDefinition" }, plugin = {
+		"html:target/cucumber-html-report" })
+public class BaseClass extends AbstractTestNGCucumberTests {
+
+	public static WebDriver driver;
 	public ExcelDataProvier excel;
-	public ConfigDataProvider config;
+	public static ConfigDataProvider config;
 	public ExtentReports report;
 	public ExtentTest logger;
+	public static String browserName;
 
 	/**
 	 * setupSuite(); initializes the following: Excel Configuration Files Extent
@@ -34,7 +41,9 @@ public class BaseClass {
 		Reporter.log("Setting up reports and Test is getting ready.", true);
 		excel = new ExcelDataProvier();
 		config = new ConfigDataProvider();
-
+		
+		browserName=config.getBrowserName();
+		
 		ExtentHtmlReporter extent = new ExtentHtmlReporter(
 				new File(System.getProperty("user.dir") + "/Reports/Report_" + Helper.getCurrentDateTime() + ".html"));
 		report = new ExtentReports();
@@ -49,24 +58,35 @@ public class BaseClass {
 	 * @param browser
 	 * @param qaURL
 	 */
-	@Parameters({ "browser", "qaURL" })
-	@BeforeClass
-	public void setup(String browser, String qaURL) {
+	/*
+	 * @Parameters({ "browser", "qaURL" })
+	 * 
+	 * @BeforeClass
+	 */
+	public static void setup(String browser, String qaURL) {
 		Reporter.log("Starting the Browser and setting the URL", true);
 
 		driver = BrowserFactory.startApplication(driver, browser, qaURL);
 
 		Reporter.log("Browser started and URl is set..", true);
 	}
+	@BeforeClass
+	public static void setup() {
+		Reporter.log("Starting the Browser and setting the URL", true);
+
+		driver = BrowserFactory.startApplication(driver, browserName);
+
+		Reporter.log("Browser started and Can now navigate to application", true);
+	}
 
 	/**
 	 * tearDown()- quits the browser after test is completed. Is executed after a
 	 * Test is completed.
 	 */
-	@AfterClass
-	public void tearDown() {
-		BrowserFactory.quitBrrowser(driver);
-	}
+
+	/*
+	 * @AfterTest public void tearDown() { BrowserFactory.quitBrrowser(driver); }
+	 */
 
 	/**
 	 * tearDownMethod(ITestResult result) Screenshots are captured based on the
@@ -76,23 +96,26 @@ public class BaseClass {
 	 * @param result
 	 * @throws IOException
 	 */
-	@AfterMethod
-	public void tearDownMethod(ITestResult result) throws IOException {
 
-		Reporter.log("Test is about to Complete >>>> Reports is getting Generated next", true);
+	/*
+	 * @AfterTest public void tearDownMethod(ITestResult result) throws IOException
+	 * {
+	 * 
+	 * Reporter.
+	 * log("Test is about to Complete >>>> Reports is getting Generated next",
+	 * true);
+	 * 
+	 * if (result.getStatus() == ITestResult.FAILURE) { logger.fail("Test Failed",
+	 * MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(
+	 * driver)).build()); } else if (result.getStatus() == ITestResult.SUCCESS) {
+	 * logger.pass("Test Passed",
+	 * MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(
+	 * driver)).build()); } else if (result.getStatus() == ITestResult.SKIP) {
+	 * logger.skip("Test Skipped",
+	 * MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(
+	 * driver)).build()); } report.flush();
+	 * 
+	 * Reporter.log("Test Completed >>>> Reports Generation Completed", true); }
+	 */
 
-		if (result.getStatus() == ITestResult.FAILURE) {
-			logger.fail("Test Failed",
-					MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
-		} else if (result.getStatus() == ITestResult.SUCCESS) {
-			logger.pass("Test Passed",
-					MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
-		} else if (result.getStatus() == ITestResult.SKIP) {
-			logger.skip("Test Skipped",
-					MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
-		}
-		report.flush();
-
-		Reporter.log("Test Completed >>>> Reports Generation Completed", true);
-	}
 }
