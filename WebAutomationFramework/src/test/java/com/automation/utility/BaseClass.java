@@ -2,6 +2,7 @@ package com.automation.utility;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.MalformedURLException;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
@@ -48,10 +49,11 @@ public class BaseClass {
 	 * 
 	 * @param browser
 	 * @param qaURL
+	 * @throws MalformedURLException 
 	 */
 	@Parameters({ "browser", "qaURL" })
 	@BeforeClass
-	public void setup(String browser, String qaURL) {
+	public void setup(String browser, String qaURL) throws MalformedURLException {
 		Reporter.log("Starting the Browser and setting the URL", true);
 
 		driver = BrowserFactory.startApplication(driver, browser, qaURL);
