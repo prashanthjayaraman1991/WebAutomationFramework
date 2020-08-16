@@ -1,0 +1,23 @@
+https://github.com/SeleniumHQ/docker-selenium
+
+1. selenium/hub
+2. selenium/node-chrome
+3. selenium/node-firefox
+
+
+Create the docker-compose.yaml from the above link and run
+
+
+http://192.168.99.100:4444/grid/console
+
+for scaling 
+
+in the docker-compose.yaml directory open new terminal and run
+docker-compose scale chrome=3
+
+
+https://www.youtube.com/watch?v=f9gJ1Th3Dho&list=PLUDwpEzHYYLtpm24ojHwubwmMNQildHBc&index=6
+
+/c/Users/mail2/Docker_Files/Selenium
+
+

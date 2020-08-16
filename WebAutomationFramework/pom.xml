@@ -29,8 +29,8 @@
 					</suiteXmlFiles>
 
 					<systemPropertyVariables>
-						<browser>${browser}</browser>
-						<qaURL>${qaURL}</qaURL>
+						<!-- <browser>${browser}</browser>
+						<qaURL>${qaURL}</qaURL> -->
 					</systemPropertyVariables>
 
 				</configuration>
