@@ -1,6 +1,6 @@
-set root=%CD%
-echo The Path is %root%
-cd /d %root%
+
+echo The Path is %CD%
+cd /d %CD%
 "cmd" /c "docker-compose up"
 
 PAUSE
