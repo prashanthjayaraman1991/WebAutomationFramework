@@ -15,9 +15,10 @@ public class ChromeTest2 {
 
 		URL url = new URL("http://192.168.99.100:4444/wd/hub");
 		RemoteWebDriver driver = new RemoteWebDriver(url, dc);
-
+		driver.manage().window().maximize();
 		driver.get("https://flipkart.com");
 		Thread.sleep(5000);
+		
 		System.out.println("Current url is: " + driver.getTitle()+" in test 2 Chrome");
 
 		driver.quit();

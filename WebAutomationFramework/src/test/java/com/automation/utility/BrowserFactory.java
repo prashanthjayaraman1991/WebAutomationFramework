@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -26,12 +27,14 @@ public class BrowserFactory {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/Drivers/chromedriver.exe");
 			
 			DesiredCapabilities dc=DesiredCapabilities.chrome();
+			dc.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 			URL url=new URL("http://192.168.99.100:4444/wd/hub");
 			RemoteWebDriver driver1=new RemoteWebDriver(url,dc);
 			driver = driver1;
 		} else if (browserName.equals("Firefox")) {
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "//Drivers/geckodriver.exe");
 			DesiredCapabilities dc=DesiredCapabilities.firefox();
+			dc.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 			URL url=new URL("http://192.168.99.100:4444/wd/hub");
 			RemoteWebDriver driver1=new RemoteWebDriver(url,dc);
 			driver = driver1;
