@@ -1,6 +1,12 @@
 #Author: mail2prashanth1991@gmail.com
 Feature: Test Facebook smoke scenario
 
+#Background: 
+    #Given Open the browser and start application
+    #When I enter username and password
+      #| mail2prashanth1991@gmail.com | Meenakshi@123 |
+    #And click on login
+    
   Scenario Outline: Test Login with Valid Credentials
     Given Open browser and start applcation
     When I enter valid "<username>" and "<password>"
@@ -11,3 +17,6 @@ Feature: Test Facebook smoke scenario
       | prashanth | test     |
       | prashanth | test     |
       | prashanth | test     |
+      
+       
+
