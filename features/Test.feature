@@ -8,9 +8,9 @@ Feature: Test Facebook smoke scenario
     #And click on login
     
   Scenario Outline: Test Login with Valid Credentials
-    Given Open browser and start applcation
+    Given Open the browser and start application
     When I enter valid "<username>" and "<password>"
-    Then user should be able to login succesfully
+    Then user should be able to login successfully
 
     Examples: 
       | username  | password |

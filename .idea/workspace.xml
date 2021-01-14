@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd5369c5-7ec4-4dd9-b2a3-a78a1de2fd1d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/WebAutomationFramework/features/Test.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/Test.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAutomationFramework/src/test/java/com/automation/stepDefinition/LoginPageDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/stepDefinition/LoginPageDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/Test.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/Test.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/automation/stepDefinition/LoginPageDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/stepDefinition/LoginPageDefs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,32 +97,49 @@
     </recent_temporary>
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="Changed root directory and added ida folder">
+      <created>1610609289635</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610609289635</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changed root directory" />
+    <MESSAGE value="Changed root directory and added ida folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed root directory and added ida folder" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610608363664">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1610608363664" />
-    <state width="1493" height="323" key="GridCell.Tab.0.bottom" timestamp="1610609077658">
+    <state x="253" y="0" key="CommitChangelistDialog2" timestamp="1610609288593">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="323" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610609077658" />
-    <state width="1493" height="323" key="GridCell.Tab.0.center" timestamp="1610609077658">
+    <state x="253" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1610609288593" />
+    <state width="1493" height="323" key="GridCell.Tab.0.bottom" timestamp="1610609206022">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="323" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610609077658" />
-    <state width="1493" height="323" key="GridCell.Tab.0.left" timestamp="1610609077658">
+    <state width="1493" height="323" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610609206022" />
+    <state width="1493" height="323" key="GridCell.Tab.0.center" timestamp="1610609206022">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="323" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610609077658" />
-    <state width="1493" height="323" key="GridCell.Tab.0.right" timestamp="1610609077658">
+    <state width="1493" height="323" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610609206022" />
+    <state width="1493" height="323" key="GridCell.Tab.0.left" timestamp="1610609206022">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="323" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610609077658" />
+    <state width="1493" height="323" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610609206022" />
+    <state width="1493" height="323" key="GridCell.Tab.0.right" timestamp="1610609206022">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="323" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610609206022" />
     <state x="407" y="173" key="MultipleFileMergeDialog" timestamp="1610608859604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -134,6 +152,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610608378905" />
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1610609291725">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1610609291725" />
     <state x="526" y="306" key="git4idea.ui.GitResetDialog" timestamp="1610608666692">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -14,8 +14,8 @@ public class LoginPageDefs extends BaseClass {
 
 	LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
 
-	@Given("^Open browser and start applcation$")
-	public void open_browser_and_start_applcation() throws Throwable {
+	@Given("^Open browser and start application$")
+	public void open_browser_and_start_application() throws Throwable {
 		String qaURL = config.getDataFromConfig("qaURL");
 		driver.get(qaURL);
 	}
@@ -25,8 +25,8 @@ public class LoginPageDefs extends BaseClass {
 		loginPage.loginIntoApplication(username, password);
 	}
 
-	@Then("^user should be able to login succesfully$")
-	public void user_should_be_able_to_login_succesfully() throws Throwable {
+	@Then("^user should be able to login successfully$")
+	public void user_should_be_able_to_login_successfully() throws Throwable {
 		System.out.println(driver.getTitle());
 	}
 
