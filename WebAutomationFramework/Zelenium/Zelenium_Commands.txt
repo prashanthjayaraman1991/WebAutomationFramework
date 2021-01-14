@@ -1,0 +1,40 @@
+Offecial website:
+https://opensource.zalando.com/zalenium/
+Pull the following images in Docker using the following 2 commands
+
+docker pull elgalu/selenium
+docker pull dosel/zalenium
+
+run the following command to start Zalenium
+docker run --rm -ti --name zalenium -p 4444:4444 -v /var/run/docker.sock:/var/run/docker.sock -v /c/Users/mail2/Docker_Files/Zalenium_Videos:/home/seluser/videos --privileged dosel/zalenium start
+
+where -v /c/Users/mail2/Docker_Files/Zalenium_Videos:/home/seluser/videos
+Is the path where the videos will be stored locally
+
+once the containers are up:
+the following url's help in viewing the selenium GRID, Live View of Execution, Dashboard:
+http://localhost:4444/grid/console
+http://localhost:4444/grid/admin/live
+http://localhost:4444/dashboard/
+
+
+@BeforeTest
+@Parameters("browser")
+void setup(String browserName) throws MalformedURLException {
+		DesiredCapabilities cap = new DesiredCapabilities();
+
+		if (browserName.toLowerCase() == "chrome") {
+			cap.setCapability(CapabilityType.BROWSER_NAME, BrowserType.CHROME);
+		}
+
+		else if (browserName.toLowerCase() == "firefox") {
+			cap.setCapability(CapabilityType.BROWSER_NAME, BrowserType.FIREFOX);
+		}
+
+		cap.setCapability(CapabilityType.PLATFORM_NAME, Platform.LINUX);
+		URL url = new URL("http://localhost:4444/wd/hub");
+		driver = new RemoteWebDriver(url, cap);
+
+		driver.get("https://google/");
+
+	}

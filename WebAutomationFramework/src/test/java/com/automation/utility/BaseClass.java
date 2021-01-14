@@ -57,7 +57,7 @@ public class BaseClass extends AbstractTestNGCucumberTests {
 	 * 
 	 * @BeforeClass
 	 */
-	public static void setup(String browser, String qaURL) {
+	public static void setup(String browser, String qaURL)throws MalformedURLException {
 		Reporter.log("Starting the Browser and setting the URL", true);
 
 		driver = BrowserFactory.startApplication(driver, browser, qaURL);
