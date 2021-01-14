@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cd5369c5-7ec4-4dd9-b2a3-a78a1de2fd1d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/WebAutomationFramework/features/Test.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/Test.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAutomationFramework/src/test/java/com/automation/stepDefinition/LoginPageDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/automation/stepDefinition/LoginPageDefs.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="CucumberBDD" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mail2\IdeaProjects\WebAutomationFramework" />
+      <recent name="C:\Users\mail2\IdeaProjects\WebAutomationFramework\src\test\java\com\automation" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.WebAutomationFramework [clean,test...]">
+    <configuration name="WebAutomationFramework [clean,test...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="test" />
+                <option value="-DxmlFiles=testng.xml" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="BaseClass" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebAutomationFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.automation.utility.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.automation.utility" />
+      <option name="MAIN_CLASS_NAME" value="com.automation.utility.BaseClass" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Maven.WebAutomationFramework [clean,test...]" />
+      <item itemvalue="TestNG.BaseClass" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.BaseClass" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610608363664">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1610608363664" />
+    <state width="1493" height="323" key="GridCell.Tab.0.bottom" timestamp="1610609077658">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="323" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610609077658" />
+    <state width="1493" height="323" key="GridCell.Tab.0.center" timestamp="1610609077658">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="323" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610609077658" />
+    <state width="1493" height="323" key="GridCell.Tab.0.left" timestamp="1610609077658">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="323" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610609077658" />
+    <state width="1493" height="323" key="GridCell.Tab.0.right" timestamp="1610609077658">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="323" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610609077658" />
+    <state x="407" y="173" key="MultipleFileMergeDialog" timestamp="1610608859604">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="407" y="173" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1610608859604" />
+    <state x="367" y="132" key="RollbackChangesDialog" timestamp="1610609048947">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="367" y="132" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1610609048947" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1610608378905">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610608378905" />
+    <state x="526" y="306" key="git4idea.ui.GitResetDialog" timestamp="1610608666692">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="526" y="306" key="git4idea.ui.GitResetDialog/0.0.1536.824@0.0.1536.824" timestamp="1610608666692" />
+  </component>
+</project>
